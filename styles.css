@@ -9,7 +9,6 @@
   display: inline-block;
 
 }
-
 .roll-button{
   text-align: center;
   margin: auto;
@@ -20,7 +19,9 @@
 body {
   background-color: #000000;
 }
-
+a:link, a:visited,a:active{
+  color: #EEEEEE;
+}
 h1 {
   margin: auto;
   font-family: 'Lobster', cursive;

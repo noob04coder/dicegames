@@ -18,7 +18,7 @@
   }
 
 body {
-  background-color: #393E46;
+  background-color: #000000;
 }
 
 h1 {
@@ -40,10 +40,22 @@ img {
   width: 80%;
 }
 
+.imgShake{
+  animation: tilt-shaking 0.3s infinite;
+}
+
 footer {
   margin-top: 5%;
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

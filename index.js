@@ -1,16 +1,19 @@
-// alert("working");
+function refreshPage(){
 var randomNumber1 = Math.floor((Math.random()*6)+1);
-// var diceImages = (["images/dice1.png","images/dice2.png", "images/dice3.png","images/dice4.png", "images/dice5.png","images/dice6.png"]);
-// document.setElementByClass(".img1").src = diceImages[randomNumber1];
 var randomImage1 = "images/dice" + randomNumber1 + ".png";
-// var randomImage2 = "images/" + randomImage1;
-document.querySelectorAll("img")[0].setAttribute("src",randomImage1);
-
 var randomNumber2 = Math.floor((Math.random()*6)+1);
 var randomImage2 = "images/dice" + randomNumber2 + ".png";
-document.querySelectorAll("img")[1].setAttribute("src",randomImage2)
-
-// function winner(){
+document.querySelectorAll("img")[0].classList.add("imgShake");
+document.querySelectorAll("img")[1].classList.add("imgShake");
+document.getElementById("diceButton").classList.add("imgShake");
+document.getElementById("diceButton").setAttribute("value","Rolling🎲");
+setTimeout(function(){
+document.getElementById("diceButton").setAttribute("value","Roll Dice. 🎲");
+document.getElementById("diceButton").classList.remove("imgShake");
+document.querySelectorAll("img")[0].classList.remove("imgShake");
+document.querySelectorAll("img")[1].classList.remove("imgShake");
+document.querySelectorAll("img")[0].setAttribute("src",randomImage1);
+document.querySelectorAll("img")[1].setAttribute("src",randomImage2);
 if(randomNumber1>randomNumber2){
   document.getElementById("mainText").innerHTML = '  <i class="fas fa-crown"></i> Player 1 Wins!!'
 }
@@ -20,9 +23,5 @@ document.getElementById("mainText").innerHTML = 'Player 2 Wins!! <i class="fas f
 else{
    document.getElementById("mainText").innerHTML = "Draw!!"
  }
-
- function refreshPage(){
- 		// if(confirm("Are you sure, want to refresh?")){
- 			location.reload();
- 		// }
+	},500)
  	}

@@ -3,7 +3,12 @@
   margin: auto;
   text-align: center;
 }
-
+#heading{
+  /* font-family: 'Indie Flower', cursive; */
+  font-size: 10rem;
+  color: rgb(248, 194, 169);
+  text-decoration: underline;
+}
 .dice {
   text-align: center;
   display: inline-block;

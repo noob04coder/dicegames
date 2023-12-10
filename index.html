@@ -9,12 +9,11 @@
    <script src="https://kit.fontawesome.com/0921310ec1.js" crossorigin="anonymous"></script>
   </head>
   <body>
-
     <div class="container">
       <h1 id="heading">Dice Game</h1>
-      <br>
-      <h1 id="mainText">Refresh Me</h1>
-
+      <div class="roll-button">
+  <input id="diceButton" type="button" class="btn btn-outline-light btn-lg"value='Roll Dice. 🎲' onclick='refreshPage()'/>
+  </div>
       <div class="dice">
         <p>Player 1</p>
         <img class="img1" src="images/dice6.png">
@@ -24,12 +23,9 @@
         <p>Player 2</p>
         <img class="img2" src="images/dice6.png">
       </div>
-
+      <h1 id="mainText">Roll The Dice</h1>
     </div>
-    <div class="roll-button">
-<input id="diceButton" type="button" class="btn btn-outline-light btn-lg"value='Roll Dice. 🎲' onclick='refreshPage()'/>
-</div>
-<script src="index.js" charset="utf-8"></script>
+      <script src="index.js" charset="utf-8"></script>
   </body>
 
   <footer>
